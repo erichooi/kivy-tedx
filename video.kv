@@ -1,0 +1,21 @@
+#:set _default_video "https://download.ted.com/talks/GiorgiaLupi_2017S-1500k.mp4?dnt"
+#:set _default_image "https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/9ca3922cace721320cd2b5de1f5761f7a75b2010_2880x1620.jpg?cb=20160511&quality=63&u=&w=512"
+#:set _default_surl "https://www.ted.com/talks/subtitles/id/2727/lang/en"
+<Video>:
+    cover: _cover
+    image: _default_image
+    surl: _default_surl
+    slabel: _slabel
+
+    allow_stretch: True
+    color: 0, 0, 0, 0
+    source: _default_video
+
+    AsyncImage:
+        id: _cover
+        source: root.image
+        size: root.width, root.height
+
+    Subtitle:
+        id: _slabel
+        x: (root.width-self.width)/2
